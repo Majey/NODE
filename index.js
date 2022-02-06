@@ -6,7 +6,21 @@
 // console.log(`The circumference of the circle is ${cir(7)}`);
 // console.log(name)
 
-const fs = require(`fs`);
+
+// *****************************************************************************************************************
+
+const http = require("http");
+
+server = http.createServer(( req, res ) => {
+    res.writeHead(200, { "Content-Type": "text/plain"});
+    res.write("Hello Developers, we're getting the hang of NODE. ");
+    res.write("This is your current url: " + req.url);
+    res.end();
+}).listen(4000);
+
+// *****************************************************************************************************************
+
+// const fs = require(`fs`);
 
 // const text = fs.readFile(`./read.txt`, (err, data) => {
 //     if (err) {
@@ -23,8 +37,8 @@ const fs = require(`fs`);
 //     console.log("Successful. File updated");
 // })
 
-const dir = "NFolder";
-const newDir = "NewF";
+// const dir = "NFolder";
+// const newDir = "NewF";
 // fs.exists(dir, (exist) => {
 //     if (exist) {
 //         console.log("Directory already exists");
@@ -34,13 +48,21 @@ const newDir = "NewF";
 //     }
 // })
 
-fs.rename(dir, newDir, (err) => {
-    if (err) {
-        console.log(err);
-    } else {
-        console.log("Directory successfully renamed!")
-    }
-})
+// fs.rename(dir, newDir, (err) => {
+//     if (err) {
+//         console.log(err);
+//     } else {
+//         console.log("Directory renamed successfully")
+//     }
+// })
+
+// fs.rmdir(newDir, (err) => {
+//     if (err) {
+//         console.log(err);
+//     }
+//     console.log("Directory removed successfully!")
+// }
+// )
 
 
 

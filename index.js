@@ -9,18 +9,33 @@
 
 // *****************************************************************************************************************
 
-const http = require("http");
+// const http = require("http");
 
-server = http.createServer(( req, res ) => {
-    res.writeHead(200, { "Content-Type": "text/plain"});
-    res.write("Hello Developers, we're getting the hang of NODE. ");
-    res.write("This is your current url: " + req.url);
-    res.end();
-}).listen(4000);
+// server = http.createServer(( req, res ) => {
+//     res.writeHead(200, { "Content-Type": "text/plain"});
+//     res.write("Hello Developers, we're getting the hang of NODE. ");
+//     res.write("This is your current url: " + req.url);
+//     res.end();
+// }).listen(4000);
 
 // *****************************************************************************************************************
 
-// const fs = require(`fs`);
+const fs = require(`fs`);
+
+let writeData = fs.createWriteStream('write.txt');
+let data = "This is data written from the writeStream method";
+writeData.write(data, 'utf8');
+writeData.end();
+writeData.on('finish', () => console.log("data written successfully!"));
+writeData.on('error', (err) => console.log(err.stack));
+
+// let readStream = fs.createReadStream("read.txt");
+// let data = "";
+// readStream.on('data', (chunk) => {
+//     data += chunk;
+// });
+// readStream.on('end', () => console.log(data));
+// readStream.on('error', (err) => console.log(err.stack));
 
 // const text = fs.readFile(`./read.txt`, (err, data) => {
 //     if (err) {

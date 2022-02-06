@@ -1,0 +1,9 @@
+The OpenJS Foundation is committed to growing our community of hosted projects. Advancing skills among the contributor and implementer communities helps enable the continued and sustained adoption of JavaScript and related technologies.
+
+Certification is a key step in that process, allowing certified developers to quickly establish their credibility and value in the job market, and also allowing companies to locate and hire high-quality teams to support their growth.
+
+The OpenJS Node.js Services Developer (JSNSD) and OpenJS Node.js Application Developer (JSNAD) certifications are available now.
+
+New Node.js training courses are available to help you prepare for the exams: Node.js Application Development (LFW211) and the Node.js Services Development (LFW212).
+
+Are you employed by an OpenJS Foundation member company or a JavaScriptLandia individual supporter?  We offer discounts to members!

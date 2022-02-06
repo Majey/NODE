@@ -22,21 +22,6 @@
 
 const fs = require(`fs`);
 
-let writeData = fs.createWriteStream('write.txt');
-let data = "This is data written from the writeStream method";
-writeData.write(data, 'utf8');
-writeData.end();
-writeData.on('finish', () => console.log("data written successfully!"));
-writeData.on('error', (err) => console.log(err.stack));
-
-// let readStream = fs.createReadStream("read.txt");
-// let data = "";
-// readStream.on('data', (chunk) => {
-//     data += chunk;
-// });
-// readStream.on('end', () => console.log(data));
-// readStream.on('error', (err) => console.log(err.stack));
-
 // const text = fs.readFile(`./read.txt`, (err, data) => {
 //     if (err) {
 //         console.log(err);
